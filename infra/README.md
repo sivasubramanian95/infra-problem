@@ -93,6 +93,7 @@ make create-cluster will create the AKS cluster
 
 There are a number of areas to improve the infrastructure and application deployment lifecycle.
 
+    * Docker images can be optimised and improved considering the size of the current image. 
     * Newsfeed application is deployed using kubernetes manifests and Could be migrated to helm charts which will help in the enhancement of microservices.
     * Introducing Continous Integration and Deployment using tools like Jenkins and improvising Scripts to deploy. Currently the project used Make for simplification of manual deployment.
     * Introducing more tools for monitoring, autoscaling, resource request in the Kubernetes for better management.
