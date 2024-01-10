@@ -57,3 +57,6 @@ All the apps take environment variables to configure them and expose the URL `/p
 
 * `APP_PORT`: The port on which to run the app
 
+### Deploy Application
+
+Refer  [README](infra/README.md) from the infra page.
