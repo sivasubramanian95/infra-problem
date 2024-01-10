@@ -61,33 +61,32 @@ Note: Ensure this operation is not reversible and the data can be lost. Kindly a
 
 Please use the External IP of the loadbalancer deployed to access the frontend application.
 
-    `kubectl get svc`
+   `kubectl get svc`
 
 You can access the application from browser on http://$EXTERNAL_IP:8080
 
 
+# Docker build
 
+The docker images are available in public repository docker hub. Also the image can be built locally using the below commands.
 
-
-
-
-docker build -f Dockerfiles/Dockerfile.quotes -t quotes:1.0 .
-docker build -f Dockerfiles/Dockerfile.newsfeed -t newsfeed:1.0 .
-docker build -f Dockerfiles/Dockerfile.frontend -t frontend:1.0 .
-
-docker tag quotes:1.0 vsivasubra95/quotes:v1
-docker tag newsfeed:1.0 vsivasubra95/newsfeed:v1
-docker tag frontend:1.0 vsivasubra95/frontend:v1
-
-docker push vsivasubra95/quotes:v1
-docker push vsivasubra95/newsfeed:v1
-docker push vsivasubra95/frontend:v1
+```bash
+$ docker build -f Dockerfiles/Dockerfile.quotes -t quotes:1.0 .
+$ docker build -f Dockerfiles/Dockerfile.newsfeed -t newsfeed:1.0 .
+$ docker build -f Dockerfiles/Dockerfile.frontend -t frontend:1.0 .
+$ docker tag quotes:1.0 vsivasubra95/quotes:v1
+$ docker tag newsfeed:1.0 vsivasubra95/newsfeed:v1
+$ docker tag frontend:1.0 vsivasubra95/frontend:v1
+$ docker push vsivasubra95/quotes:v1
+$ docker push vsivasubra95/newsfeed:v1
+$ docker push vsivasubra95/frontend:v1
+```
 
 # Deploy Application
 
 Please use the Makefile from the path provided under $WORKDIR/infra
 make create-cluster will create the AKS cluster
 
-make deploy-app 
+   `make deploy-app` 
 
 
