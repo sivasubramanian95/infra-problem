@@ -89,4 +89,12 @@ make create-cluster will create the AKS cluster
 
    `make deploy-app` 
 
+# Notes on Future Work
+
+There are a number of areas to improve the infrastructure and application deployment lifecycle.
+
+    * Newsfeed application is deployed using kubernetes manifests and Could be migrated to helm charts which will help in the enhancement of microservices.
+    * Introducing Continous Integration and Deployment using tools like Jenkins and improvising Scripts to deploy. Currently the project used Make for simplification of manual deployment.
+    * Introducing more tools for monitoring, autoscaling, resource request in the Kubernetes for better management.
+     
 
