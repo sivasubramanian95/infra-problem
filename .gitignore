@@ -14,3 +14,8 @@ pom.xml.asc
 .DS_Store
 *.iml
 .idea/
+/infra/.kube
+/infra/.terraform
+/infra/.terraform.lock.hcl*
+/infra/terraform.tfstate*
+/infra/main.tfplan*
