@@ -4,6 +4,12 @@
 The AKS (Azure Kubernetes Service) cluster is created by using Terraform. Please use the below Make commands to create and operate some basic functionalities of Cluster including deploying the newsfeed application.
 The terraform scripts are placed in infra-problem/infra
 
+# Prerequisites
+
+    * Terraform
+    * Azure CLI
+Note: Create a [Azure Service Principal](https://learn.microsoft.com/en-us/cli/azure/azure-cli-sp-tutorial-1?tabs=bash) and use the client ID, Client Secret, Subscription ID, Tenant ID in the variables.tf file.
+
 *Environment variable*:
 
 * `WORKDIR`: The path where you have the repository infra-problem
